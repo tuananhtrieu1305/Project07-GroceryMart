@@ -1,0 +1,5 @@
+@use "../abstracts";
+.logo {
+  @include abstracts.flexCenter;
+  gap: 0 14px;
+}

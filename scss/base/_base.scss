@@ -6,4 +6,22 @@ html {
 body {
   font-size: 1.6rem;
   font-family: abstracts.$primary-font;
+  background: var(--body-bg);
+  color: var(--text-color);
+}
+a {
+  text-decoration: none;
+}
+a,
+button {
+  color: inherit;
+}
+.container {
+  width: min(1340px, 100% - 40px);
+  margin: 0 auto;
+}
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 145.455%;
 }
