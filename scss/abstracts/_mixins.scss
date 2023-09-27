@@ -1,0 +1,24 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin grid($column, $spacing) {
+  --column: #{$column};
+  --spacing: #{$spacing};
+  display: flex;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+  > * {
+    margin-left: var(--spacing);
+    width: calc(100% / var(--column) - var(--spacing));
+  }
+}
+@mixin line-clamp($line-clamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
